@@ -47,7 +47,7 @@ a{color:inherit}
 .lockup{position:relative;margin:26px 0 8px;line-height:.82;font-weight:400}
 .lockup .big{display:block;font-family:'Instrument Serif',serif;font-size:clamp(84px,17vw,250px);letter-spacing:-.01em;text-transform:uppercase}
 .lockup .big span{display:inline-block;animation:up 1.5s cubic-bezier(.16,.8,.2,1) both}
-.lockup .sig{position:relative;display:block;margin-top:-.12em;font-family:'Pinyon Script',cursive;font-size:clamp(54px,9vw,132px);color:var(--cocoa);clip-path:inset(0 100% 0 0);animation:write 2.2s 1.1s cubic-bezier(.6,.05,.3,1) forwards}
+.lockup .sig{position:relative;z-index:2;display:block;margin-top:-.4em;font-family:'Pinyon Script',cursive;font-size:clamp(54px,9vw,132px);color:var(--cocoa);clip-path:inset(-60% 100% -40% 0);animation:write 2.2s 1.1s cubic-bezier(.6,.05,.3,1) forwards}
 .hero .tag{margin:34px 0 0;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(20px,2vw,26px);color:var(--soft);animation:rise 1.4s 1.9s cubic-bezier(.2,.7,.2,1) both}
 .hero .row{display:flex;align-items:center;gap:22px;margin-top:30px;animation:rise 1.4s 2.2s cubic-bezier(.2,.7,.2,1) both}
 .hero .row b{width:5px;height:5px;border-radius:50%;background:var(--moss);opacity:.6}
@@ -58,7 +58,7 @@ a{color:inherit}
 .scrollcue{position:absolute;left:50%;bottom:26px;width:1px;height:60px;background:var(--line);overflow:hidden}
 .scrollcue::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--moss);animation:drop 2.4s cubic-bezier(.6,0,.4,1) infinite}
 @keyframes up{from{transform:translateY(105%);opacity:0}to{transform:none;opacity:1}}
-@keyframes write{to{clip-path:inset(0 -5% 0 0)}}
+@keyframes write{to{clip-path:inset(-60% -5% -40% 0)}}
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes spin{to{transform:rotate(360deg)}}
