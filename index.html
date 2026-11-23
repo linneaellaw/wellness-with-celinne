@@ -200,12 +200,26 @@ footer p{margin:16px 0 0;font-size:11px;letter-spacing:.28em;text-transform:uppe
 
 .club p.label,.happ .head p.label,.groups p.label{font-family:'Jost',sans-serif;font-size:11px;font-style:normal;line-height:1.4;max-width:none}
 .club p.label,.happ .head p.label{margin:0 auto}
+.rhero{padding:110px 24px 90px;text-align:center}
+.rhero h1{margin:26px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(84px,14vw,210px);line-height:.85;text-transform:uppercase}
+.rhero h1 .sig{display:block;font-family:'Pinyon Script',cursive;text-transform:none;font-size:.5em;color:var(--cocoa);margin-top:.05em;clip-path:inset(0 100% 0 0);animation:write 2.2s .9s cubic-bezier(.6,.05,.3,1) forwards}
+.rhero p{margin:34px auto 0;max-width:36rem;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.5;color:var(--soft)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.steps>div{padding:56px clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:14px}
+.steps>div+div{border-left:1px solid var(--line)}
+.steps .n{font-family:'Pinyon Script',cursive;font-size:44px;color:var(--cocoa);line-height:1}
+.steps h3{margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:32px;line-height:1.05;text-transform:uppercase}
+.steps p{margin:0;font-family:'Instrument Serif',serif;font-size:19px;line-height:1.55;color:var(--soft)}
+.sect{padding:140px 0}
+.sect>.wrap>h2{margin:0 0 60px;text-align:center;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;text-transform:uppercase}
+.sect>.wrap>h2 .script{color:var(--cocoa)}
+@media (max-width:860px){.steps{grid-template-columns:1fr}.steps>div+div{border-left:0;border-top:1px solid var(--line)}}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
 .js .giant .card.rv:nth-child(2):not(.in){transform:translateY(0)}
 .js .giant .card.rv.in:nth-child(2){transform:translateY(-40px)}
-.js .sc{clip-path:inset(0 100% 0 0);transition:clip-path 1.8s cubic-bezier(.6,.05,.3,1) .3s}
+.js .sc{display:inline-block;clip-path:inset(0 100% 0 0);transition:clip-path 1.8s cubic-bezier(.6,.05,.3,1) .3s}
 .js .sc.in{clip-path:inset(0 -5% 0 0)}
 
 @media (max-width:860px){
@@ -255,11 +269,11 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(o
 <header class="top">
 <a class="brand" href="#top" aria-label="Wellness with Celinne, home"><span>WELLNESS</span><em>with</em><span>CELINNE</span></a>
 <nav class="nav" aria-label="Main">
-<a href="#dance">Dance</a>
 <a href="#celinne">Celinne</a>
+<a href="#dance">Dance</a>
 <a href="#massage">Massage</a>
 <a href="#happenings">Happenings</a>
-<a href="#retreats">Retreats</a>
+<a href="retreats.html">Retreats</a>
 <a class="res" href="#book">Reserve</a>
 </nav>
 </header>
@@ -393,7 +407,7 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(o
 <div class="wrap">
 <h2 class="rv">Retreats <span class="script sc">on the Riviera</span></h2>
 <div class="g one rv">
-<div><p class="label" style="margin:0;color:var(--soft)">For your retreat</p><h3>Dance &amp; treatments, woven in</h3><p>Dance sessions and treatments woven into your retreat, for a few guests or the whole group, wherever you gather on the Riviera.</p><div><a class="btn" href="mailto:celinne.karlsson@icloud.com?subject=Retreat">Enquire about a retreat</a></div></div>
+<div><p class="label" style="margin:0;color:var(--soft)">For your retreat</p><h3>Dance &amp; treatments, woven in</h3><p>Dance sessions and treatments woven into your retreat, for a few guests or the whole group, wherever you gather on the Riviera.</p><div><a class="btn" href="retreats.html">Discover retreats</a></div></div>
 </div>
 </div>
 </section>
