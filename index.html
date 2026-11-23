@@ -204,7 +204,7 @@ footer p{margin:16px 0 0;font-size:11px;letter-spacing:.28em;text-transform:uppe
 .club p.label,.happ .head p.label{margin:0 auto}
 .rhero{padding:110px 24px 90px;text-align:center}
 .rhero h1{margin:26px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(84px,14vw,210px);line-height:.85;text-transform:uppercase}
-.rhero h1 .sig{display:block;font-family:'Pinyon Script',cursive;text-transform:none;font-size:.5em;color:var(--cocoa);margin-top:.05em;clip-path:inset(0 100% 0 0);animation:write 2.2s .9s cubic-bezier(.6,.05,.3,1) forwards}
+.rhero h1 .sig{display:block;font-family:'Pinyon Script',cursive;text-transform:none;font-size:.5em;color:var(--cocoa);margin-top:.05em;animation:rise 1.8s .9s cubic-bezier(.2,.7,.2,1) both}
 .rhero p{margin:34px auto 0;max-width:36rem;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.5;color:var(--soft)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
 .steps>div{padding:56px clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:14px}
@@ -238,8 +238,8 @@ footer{position:relative}
 .js .rv.in{opacity:1;transform:none}
 .js .giant .card.rv:nth-child(2):not(.in){transform:translateY(0)}
 .js .giant .card.rv.in:nth-child(2){transform:translateY(-40px)}
-.js .sc{display:inline-block;clip-path:inset(-60% 100% -90% -12%);transition:clip-path 1.8s cubic-bezier(.6,.05,.3,1) .3s}
-.js .sc.in{clip-path:inset(-60% -15% -90% -12%)}
+.js .sc{display:inline-block;opacity:0;filter:blur(6px);transform:translateY(14px);transition:opacity 1.6s cubic-bezier(.2,.7,.2,1) .25s,filter 1.6s cubic-bezier(.2,.7,.2,1) .25s,transform 1.6s cubic-bezier(.2,.7,.2,1) .25s}
+.js .sc.in{opacity:1;filter:none;transform:none}
 
 @media (max-width:860px){
 .nav{grid-template-columns:repeat(3,1fr)}
@@ -261,7 +261,7 @@ footer{position:relative}
 .postcard .cap{grid-template-columns:1fr;text-align:center}
 .postcard .cap span{text-align:center!important}
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.lockup .sig,.js .sc{clip-path:none}.js .rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.lockup .sig,.js .sc{display:inline-block;opacity:0;filter:blur(6px);transform:translateY(14px);transition:opacity 1.6s cubic-bezier(.2,.7,.2,1) .25s,filter 1.6s cubic-bezier(.2,.7,.2,1) .25s,transform 1.6s cubic-bezier(.2,.7,.2,1) .25s}.js .rv{opacity:1;transform:none}}
 </style>
 <script>
 document.documentElement.classList.add('js');
