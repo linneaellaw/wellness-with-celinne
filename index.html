@@ -172,6 +172,8 @@ a{color:inherit}
 .groups .g{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
 .groups .g>div{padding:64px clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:18px}
 .groups .g>div+div{border-left:1px solid var(--line)}
+.groups .g.one{grid-template-columns:1fr;max-width:820px;margin:0 auto;text-align:center}
+.groups .g.one>div{align-items:center}
 .groups h2{margin:0 0 60px;text-align:center;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;text-transform:uppercase}
 .groups h2 .script{color:var(--cocoa)}
 .groups h3{margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:40px}
@@ -257,7 +259,7 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(o
 <a href="#celinne">Celinne</a>
 <a href="#massage">Massage</a>
 <a href="#happenings">Happenings</a>
-<a href="#groups">Groups</a>
+<a href="#retreats">Retreats</a>
 <a class="res" href="#book">Reserve</a>
 </nav>
 </header>
@@ -387,12 +389,11 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(o
 </div>
 </section>
 
-<section id="groups" class="groups">
+<section id="retreats" class="groups">
 <div class="wrap">
-<h2 class="rv">Retreats &amp; <span class="script sc">corporate events</span></h2>
-<div class="g rv">
-<div><p class="label" style="margin:0;color:var(--soft)">For retreats</p><h3>Retreats</h3><p>Dance sessions and treatments woven into your retreat, for a few guests or the whole group, wherever you gather on the Riviera.</p><div><a class="link" href="mailto:celinne.karlsson@icloud.com?subject=Retreat">Enquire</a></div></div>
-<div><p class="label" style="margin:0;color:var(--soft)">For teams</p><h3>Corporate events</h3><p>A relaxed dance class to bring a team together, or treatments to let them recharge, tailored to your event.</p><div><a class="link" href="mailto:celinne.karlsson@icloud.com?subject=Corporate%20event">Enquire</a></div></div>
+<h2 class="rv">Retreats <span class="script sc">on the Riviera</span></h2>
+<div class="g one rv">
+<div><p class="label" style="margin:0;color:var(--soft)">For your retreat</p><h3>Dance &amp; treatments, woven in</h3><p>Dance sessions and treatments woven into your retreat, for a few guests or the whole group, wherever you gather on the Riviera.</p><div><a class="btn" href="mailto:celinne.karlsson@icloud.com?subject=Retreat">Enquire about a retreat</a></div></div>
 </div>
 </div>
 </section>
