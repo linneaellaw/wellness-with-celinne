@@ -216,6 +216,21 @@ footer p{margin:16px 0 0;font-size:11px;letter-spacing:.28em;text-transform:uppe
 @media (max-width:860px){.steps{grid-template-columns:1fr}.steps>div+div{border-left:0;border-top:1px solid var(--line)}}
 .spot .note{margin:0;max-width:30rem;font-family:'Instrument Serif',serif;font-size:18.5px;line-height:1.55;color:var(--soft)}
 .spot .note .label{display:block;margin-bottom:8px;font-family:'Jost',sans-serif;font-size:10.5px}
+/* café touches */
+.awning{position:relative;z-index:5;height:46px;background:repeating-linear-gradient(90deg,#EFE6D8 0 28px,#21452B 28px 56px);
+-webkit-mask:radial-gradient(circle at 14px 0,#000 14px,transparent 14.5px) bottom/28px 15px repeat-x,linear-gradient(#000,#000) top/100% calc(100% - 15px) no-repeat;
+mask:radial-gradient(circle at 14px 0,#000 14px,transparent 14.5px) bottom/28px 15px repeat-x,linear-gradient(#000,#000) top/100% calc(100% - 15px) no-repeat;
+filter:drop-shadow(0 6px 8px rgba(0,0,0,.18));transform-origin:top;animation:unroll 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes unroll{from{transform:scaleY(0)}to{transform:none}}
+.stripes{height:22px;background:repeating-linear-gradient(90deg,#EFE6D8 0 22px,#21452B 22px 44px)}
+.book{border-top:0}.book::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:repeating-linear-gradient(90deg,#21452B 0 22px,#EFE6D8 22px 44px)}
+.giant .card .ph{border-radius:999px 999px 0 0;padding:10px;background:transparent;border:1px solid var(--line);position:relative}
+.giant .card .ph::after{content:"";position:absolute;inset:6px;border:1px solid var(--line);border-radius:999px 999px 0 0;pointer-events:none}
+.giant .card img{border-radius:999px 999px 0 0}
+.crest{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:74px;height:84px;margin:0 auto 22px;border:1px solid var(--moss);outline:1px solid var(--moss);outline-offset:4px;font-family:'Instrument Serif',serif;line-height:.8}
+.crest b{font-weight:400;font-size:34px}.crest i{font-family:'Pinyon Script',cursive;font-style:normal;font-size:30px;margin-top:-4px}
+.crest small{font-family:'Jost',sans-serif;font-size:7px;letter-spacing:.3em;margin-top:6px;text-transform:uppercase}
+footer{position:relative}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -279,6 +294,7 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(o
 <a class="res" href="#book">Reserve</a>
 </nav>
 </header>
+<div class="awning" aria-hidden="true"></div>
 
 <main>
 <section id="top" class="hero">
@@ -426,7 +442,9 @@ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(o
 </section>
 </main>
 
+<div class="stripes" aria-hidden="true"></div>
 <footer>
+<div class="crest" aria-hidden="true"><b>W</b><i>c</i><small>Côte d'Azur</small></div><br>
 <a class="brand" href="#top" aria-label="Back to top"><span>WELLNESS</span><em>with</em><span>CELINNE</span></a>
 <p>Dance · Massage · Côte d'Azur</p>
 </footer>
