@@ -256,7 +256,7 @@ footer{position:relative}
 .pc{position:absolute;left:50%;top:10px;width:var(--cw);margin:0;background:#FBF8F2;padding:14px 14px 10px;box-shadow:0 30px 60px -28px rgba(20,40,25,.45),0 1px 0 rgba(0,0,0,.05);
 transform:translateX(-50%) translate(var(--x,0px),var(--y,0px)) rotate(var(--r,0deg));transition:box-shadow .6s;will-change:transform}
 .pc img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
-.pc.c img{object-position:28% center}
+
 .pc figcaption{display:flex;justify-content:center;align-items:center;gap:14px;padding-top:10px;min-height:44px;color:#234F2E}
 .pc figcaption .label{font-size:9px}.pc figcaption .script{font-size:30px;color:#437350}
 .pc.c{z-index:3}.pc.l{z-index:1}.pc.r{z-index:2}
@@ -286,6 +286,20 @@ transform:translateX(-50%) translate(var(--x,0px),var(--y,0px)) rotate(var(--r,0
 .happ.wood .trio::after{content:"";position:absolute;left:-24px;right:-24px;bottom:0;height:12px;background:linear-gradient(#7A5539,#4A2E1D);box-shadow:0 18px 26px -6px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,230,200,.35)}
 .happ.wood .btn:hover{background:#F3EADC;color:#3B2517}
 @media (max-width:860px){.pc{--cw:min(300px,60vw)}.happ.wood .trio::after{display:none}}
+.motion{padding:130px 0 120px;background:#fff;color:#234F2E;--soft:#43664A;--cocoa:#437350}
+.mo-head{text-align:center;margin-bottom:60px}
+.mo-head h2{margin:14px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(56px,8vw,120px);line-height:.9;text-transform:uppercase}
+.mo-head h2 .script{text-transform:none;color:var(--cocoa)}
+.mo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;align-items:start}
+.mv{margin:0;display:flex;flex-direction:column;align-items:center;gap:16px}
+.mv:nth-child(even){margin-top:70px}
+.mvf{width:100%;aspect-ratio:9/15;border-radius:999px 999px 0 0;overflow:hidden;background:#e9e4da;padding:8px;border:1px solid rgba(35,79,46,.2)}
+.mvf video{width:100%;height:100%;object-fit:cover;display:block;border-radius:999px 999px 0 0;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.mv:hover video{transform:scale(1.04)}
+.mv figcaption{display:flex;flex-direction:column;align-items:center;gap:4px}
+.mv figcaption .label{font-size:10px;color:var(--soft)}
+.mv figcaption .script{font-size:32px;color:var(--cocoa);padding:0 .2em .1em}
+@media (max-width:860px){.mo-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:0 4px 10px;scrollbar-width:none}.mv{flex:0 0 68%;scroll-snap-align:center}.mv:nth-child(even){margin-top:0}}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -364,6 +378,15 @@ document.querySelectorAll('.idx-list a').forEach(function(a){a.addEventListener(
 a.addEventListener('mouseleave',function(){fl.classList.remove('on');});a.addEventListener('mousemove',function(e){tx=e.clientX+160;ty=e.clientY;});});
 });
 </script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+var vs=[].slice.call(document.querySelectorAll('.mv video'));if(!vs.length)return;
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function on(v){if(!v.src)v.src=v.getAttribute('data-src');if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)on(e.target);else if(e.target.src)e.target.pause();});},{rootMargin:'200px 0px'});vs.forEach(function(v){io.observe(v);});}
+else vs.forEach(on);
+});
+</script>
 </head>
 <body>
 
@@ -416,9 +439,9 @@ a.addEventListener('mouseleave',function(){fl.classList.remove('on');});a.addEve
 <div class="wrap">
 <h3 class="rv">Meet <em>Celinne</em></h3>
 <div class="stack" aria-label="Postcards of Celinne">
-<figure class="pc l"><img src="images/dance-studio.webp" alt="Celinne holding a ballroom line in a light-filled studio" loading="lazy" style="filter:grayscale(1)"><figcaption><span class="script">Dance</span></figcaption></figure>
-<figure class="pc r"><img src="images/massage-face.webp" alt="Hands giving a calm facial massage" loading="lazy"><figcaption><span class="script">Massage</span></figcaption></figure>
-<figure class="pc c"><img src="images/celinne-paris.webp" alt="Celinne striking a playful dance pose by a street sign in a Paris park" loading="lazy"><figcaption><span class="label">Wellness with Celinne</span><span class="script">Celinne</span><span class="label">Côte d'Azur</span></figcaption></figure>
+<figure class="pc l"><img src="images/celinne-laughing.webp" alt="Celinne laughing mid-step by an open window over Paris rooftops" loading="lazy"><figcaption><span class="script">Joy</span></figcaption></figure>
+<figure class="pc r"><img src="images/celinne-stairs.webp" alt="Celinne smiling on sunlit stone steps in training clothes" loading="lazy" style="object-position:center 30%"><figcaption><span class="script">Energy</span></figcaption></figure>
+<figure class="pc c"><img src="images/celinne-balcony-extension.webp" alt="Celinne in a long black dress, extending her leg in a dance pose on a Paris balcony" loading="lazy" style="object-position:center 30%"><figcaption><span class="label">Wellness with Celinne</span><span class="script">Celinne</span><span class="label">Côte d'Azur</span></figcaption></figure>
 </div>
 </div>
 </section>
@@ -436,6 +459,18 @@ a.addEventListener('mouseleave',function(){fl.classList.remove('on');});a.addEve
 </div>
 </section>
 
+<section class="motion" aria-labelledby="mo-h">
+<div class="wrap">
+<div class="mo-head"><p class="label rv" style="margin:0;color:var(--soft)">Moments, filmed</p><h2 id="mo-h" class="rv">In <span class="script sc">motion</span></h2></div>
+<div class="mo-row">
+<figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/ballroom-1.jpg" data-src="videos/ballroom-1.mp4" aria-label="In the spotlight"></video></div><figcaption><span class="label">Ballroom &amp; Latin</span><span class="script">In the spotlight</span></figcaption></figure>
+<figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/group-class.jpg" data-src="videos/group-class.mp4" aria-label="Poolside class"></video></div><figcaption><span class="label">Dance</span><span class="script">Poolside class</span></figcaption></figure>
+<figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/ballroom-2.jpg" data-src="videos/ballroom-2.mp4" aria-label="On the floor"></video></div><figcaption><span class="label">Showcase</span><span class="script">On the floor</span></figcaption></figure>
+<figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/massage-pool.jpg" data-src="videos/massage-pool.mp4" aria-label="By the pool"></video></div><figcaption><span class="label">Massage</span><span class="script">By the pool</span></figcaption></figure>
+</div>
+</div>
+</section>
+
 <section class="idx" aria-labelledby="idx-h">
 <div class="wrap">
 <p class="label rv" style="margin:0;color:var(--soft)">The offerings</p>
@@ -445,7 +480,7 @@ a.addEventListener('mouseleave',function(){fl.classList.remove('on');});a.addEve
 <li><a href="#massage" data-img="images/massage-skin.webp"><span class="n">II</span><span class="w">Massage</span><span class="s">A touch that listens</span><img class="th" src="images/massage-skin.webp" alt="" loading="lazy"></a></li>
 <li><a href="#happenings" data-img="images/group-coast.webp"><span class="n">III</span><span class="w">Happenings</span><span class="s">On the Riviera</span><img class="th" src="images/group-coast.webp" alt="" loading="lazy"></a></li>
 <li><a href="retreats.html" data-img="images/massage-stones.webp"><span class="n">IV</span><span class="w">Retreats</span><span class="s">Woven into your stay</span><img class="th" src="images/massage-stones.webp" alt="" loading="lazy"></a></li>
-<li><a href="guide.html" data-img="images/celinne-paris.webp"><span class="n">V</span><span class="w">City Guide</span><span class="s">Celinne's favourites</span><img class="th" src="images/celinne-paris.webp" alt="" loading="lazy"></a></li>
+<li><a href="guide.html" data-img="images/celinne-balcony-arm.webp"><span class="n">V</span><span class="w">City Guide</span><span class="s">Celinne's favourites</span><img class="th" src="images/celinne-balcony-arm.webp" alt="" loading="lazy"></a></li>
 </ul>
 </div>
 <img class="idx-float" src="images/dance-couple-bw.webp" alt="" aria-hidden="true">
@@ -468,7 +503,7 @@ a.addEventListener('mouseleave',function(){fl.classList.remove('on');});a.addEve
 </section>
 
 <section id="massage" class="spot light">
-<div class="media"><img src="images/massage-stones.webp" alt="A hot stone massage under white curtains, looking out over the sea" loading="lazy" style="object-position:center 60%"><div class="vert"><em>Lymphatic</em> drainage</div></div>
+<div class="media"><img src="images/celinne-massage-terrace.webp" alt="Celinne beside her massage table on a terrace above the sea" loading="lazy" style="object-position:center 40%"><div class="vert"><em>Lymphatic</em> drainage</div></div>
 <div class="panel">
 <p class="label rv" style="margin:0;color:var(--soft)">II · Massage</p>
 <h2 class="rv"><span class="script sc">Massage</span>A touch that listens</h2>
