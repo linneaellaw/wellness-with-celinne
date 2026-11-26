@@ -18,7 +18,7 @@ addEventListener('DOMContentLoaded',function(){
   function swagY(x){var t=((x%wave)+wave)%wave/wave;return 3+20*Math.sin(Math.PI*t);}
   function build(){
     dpr=Math.min(2,devicePixelRatio||1);W=host.clientWidth;cv.width=W*dpr;cv.height=H*dpr;cv.style.height=H+'px';
-    wave=W<700?140:220;spSeed=sprite(1.05,.5,.9);spPearl=sprite(1.6,.7,1);spDrop=dropSprite();
+    var nav=document.querySelector('.nav'),cols=nav?getComputedStyle(nav).gridTemplateColumns.split(' ').length:0;wave=(nav&&getComputedStyle(nav).display==='grid'&&cols>1)?W/cols:W/3;spSeed=sprite(1.05,.5,.9);spPearl=sprite(1.6,.7,1);spDrop=dropSprite();
     strands=[];var x=2,i=0;
     while(x<W+6){var t=((x%wave)+wave)%wave/wave,drape=Math.pow(Math.sin(Math.PI*t),1.4),
       L=22+64*drape+rnd(i)*16-(i%4===1?8:0);
