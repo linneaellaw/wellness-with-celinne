@@ -290,7 +290,7 @@ transform:translateX(-50%) translate(var(--x,0px),var(--y,0px)) rotate(var(--r,0
 .mo-head{text-align:center;margin-bottom:60px}
 .mo-head h2{margin:14px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(56px,8vw,120px);line-height:.9;text-transform:uppercase}
 .mo-head h2 .script{text-transform:none;color:var(--cocoa)}
-.mo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;align-items:start}
+.mo-row{display:grid;grid-template-columns:repeat(2,minmax(0,380px));justify-content:center;gap:60px;align-items:start}
 .mv{margin:0;display:flex;flex-direction:column;align-items:center;gap:16px}
 .mv:nth-child(even){margin-top:70px}
 .mvf{width:100%;aspect-ratio:9/15;border-radius:999px 999px 0 0;overflow:hidden;background:#e9e4da;padding:8px;border:1px solid rgba(35,79,46,.2)}
@@ -468,9 +468,7 @@ else vs.forEach(on);
 <div class="mo-head"><p class="label rv" style="margin:0;color:var(--soft)">Moments, filmed</p><h2 id="mo-h" class="rv">In <span class="script sc">motion</span></h2></div>
 <div class="mo-row">
 <figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/ballroom-1.jpg" data-src="videos/ballroom-1.mp4" aria-label="In the spotlight"></video></div><figcaption><span class="label">Ballroom &amp; Latin</span><span class="script">In the spotlight</span></figcaption></figure>
-<figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/group-class.jpg" data-src="videos/group-class.mp4" aria-label="Poolside class"></video></div><figcaption><span class="label">Dance</span><span class="script">Poolside class</span></figcaption></figure>
 <figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/ballroom-2.jpg?v=2" data-src="videos/ballroom-2.mp4?v=2" aria-label="On the floor"></video></div><figcaption><span class="label">Showcase</span><span class="script">On the floor</span></figcaption></figure>
-<figure class="mv rv"><div class="mvf"><video muted loop playsinline preload="none" poster="videos/massage-pool.jpg" data-src="videos/massage-pool.mp4" aria-label="By the pool"></video></div><figcaption><span class="label">Massage</span><span class="script">By the pool</span></figcaption></figure>
 </div>
 </div>
 </section>
