@@ -303,6 +303,27 @@ transform:translateX(-50%) translate(var(--x,0px),var(--y,0px)) rotate(var(--r,0
 .hero .tag.slogan{font-family:'Pinyon Script',cursive;font-style:normal;font-size:clamp(34px,4vw,56px);line-height:1.1;color:var(--choc);margin-top:30px;padding:0 .2em .1em}
 .hero .tag.sub{margin-top:10px;font-size:clamp(17px,1.6vw,21px)}
 footer .foot-slogan{font-family:'Pinyon Script',cursive;font-size:30px;letter-spacing:0;text-transform:none;color:inherit;opacity:.95}
+.happ.white{background:#fff;border:0;padding:140px 0 150px}
+.happ.white .btn:hover{background:#234F2E;color:#fff}
+.invites{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;align-items:start;padding:10px 0 20px}
+.inv{background:#FBF8F2;color:#234F2E;box-shadow:0 30px 50px -28px rgba(20,40,25,.45),0 1px 0 rgba(0,0,0,.04);transform:rotate(var(--rot));transition:transform 1s cubic-bezier(.2,.7,.2,1),box-shadow 1s}
+.js .inv.rv{transform:translateY(36px) rotate(var(--rot))}.js .inv.rv.in{transform:rotate(var(--rot))}
+.inv:nth-child(2){margin-top:60px}
+.inv:hover,.js .inv.rv.in:hover{transform:rotate(0) translateY(-10px);box-shadow:0 40px 60px -26px rgba(20,40,25,.5)}
+.inv-in{margin:14px;border:1px solid rgba(35,79,46,.35);outline:1px solid rgba(35,79,46,.35);outline-offset:-6px;padding:30px 26px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.inv-k{margin:0;font-family:'Pinyon Script',cursive;font-size:26px;color:#437350}
+.inv-ph{width:78%;aspect-ratio:4/5;border-radius:999px 999px 0 0;overflow:hidden;margin:6px 0 10px}
+.inv-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 2s cubic-bezier(.2,.7,.2,1)}
+.inv:hover .inv-ph img{transform:scale(1.06)}
+.inv .label{font-size:10px;color:#43664A}
+.inv h3{margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,2.8vw,40px);line-height:1;text-transform:uppercase}
+.inv h3 .script{display:block;text-transform:none;font-size:.95em;color:#437350;margin-bottom:4px;padding:0 .15em .05em}
+.inv-d{margin:4px 0 0;font-family:'Instrument Serif',serif;font-size:18px;line-height:1.55;color:#43664A;max-width:17rem}
+.inv-stub{position:relative;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:14px 22px 16px;border-top:2px dashed rgba(35,79,46,.3);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#43664A}
+.inv-stub::before,.inv-stub::after{content:"";position:absolute;top:-11px;width:20px;height:20px;border-radius:50%;background:#fff}
+.inv-stub::before{left:-10px}.inv-stub::after{right:-10px}
+.inv-stub .script{font-size:24px;letter-spacing:0;text-transform:none;color:#234F2E}
+@media (max-width:860px){.invites{grid-template-columns:1fr;max-width:400px;margin:0 auto;gap:50px}.inv:nth-child(2){margin-top:0}}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -534,17 +555,44 @@ else vs.forEach(on);
 <div class="rules rv"><span>No packages</span><span>No memberships</span><span>Book what you feel like</span></div>
 </section>
 
-<section id="happenings" class="happ">
+<section id="happenings" class="happ white">
 <div class="wrap">
 <div class="head">
 <p class="label rv" style="color:var(--soft);margin:0">Happenings</p>
 <h2 class="rv">Moments <em>on the Riviera</em></h2>
 <p class="rv">No fixed weekly schedule: each date is announced on Instagram.</p>
 </div>
-<div class="trio">
-<div class="hc c1 rv"><span class="label" style="font-size:10px">By the sea</span><span class="script">Dance &amp; Bellinis</span><h3>at Belle Plage</h3><p>A relaxed class by the sea, followed by a Bellini in the sun.</p></div>
-<div class="hc c2 rv"><span class="label" style="font-size:10px">Mornings</span><span class="script">Workshops</span><h3>&amp; Brunches</h3><p>A morning of movement, then a long table and good company.</p></div>
-<div class="hc c3 rv"><span class="label" style="font-size:10px">Together</span><span class="script">Pop-ups</span><h3>&amp; Collaborations</h3><p>Shared moments with other creators, in places worth discovering.</p></div>
+<div class="invites">
+<article class="inv rv" style="--rot:-1.6deg">
+<div class="inv-in">
+<p class="inv-k">You are invited</p>
+<div class="inv-ph"><img src="images/group-coast.webp" alt="" loading="lazy" style="object-position:center 60%"></div>
+<p class="label">By the sea</p>
+<h3><span class="script">Dance &amp; Bellinis</span>at Belle Plage</h3>
+<p class="inv-d">A relaxed class by the sea, followed by a Bellini in the sun.</p>
+</div>
+<div class="inv-stub"><span>Admit one</span><span class="script">RSVP</span><span>Date on Instagram</span></div>
+</article>
+<article class="inv rv" style="--rot:1.2deg">
+<div class="inv-in">
+<p class="inv-k">You are invited</p>
+<div class="inv-ph"><img src="videos/group-class.jpg?v=2" alt="" loading="lazy" style="object-position:center 55%"></div>
+<p class="label">Mornings</p>
+<h3><span class="script">Workshops</span>&amp; Brunches</h3>
+<p class="inv-d">A morning of movement, then a long table and good company.</p>
+</div>
+<div class="inv-stub"><span>Admit one</span><span class="script">RSVP</span><span>Date on Instagram</span></div>
+</article>
+<article class="inv rv" style="--rot:-0.8deg">
+<div class="inv-in">
+<p class="inv-k">You are invited</p>
+<div class="inv-ph"><img src="images/celinne-laughing.webp" alt="" loading="lazy" style="object-position:center 25%"></div>
+<p class="label">Together</p>
+<h3><span class="script">Pop-ups</span>&amp; Collaborations</h3>
+<p class="inv-d">Shared moments with other creators, in places worth discovering.</p>
+</div>
+<div class="inv-stub"><span>Admit one</span><span class="script">RSVP</span><span>Date on Instagram</span></div>
+</article>
 </div>
 <div class="foot rv"><a class="btn" href="https://www.instagram.com/wellnesswithcelinne/">See dates on Instagram</a></div>
 </div>
