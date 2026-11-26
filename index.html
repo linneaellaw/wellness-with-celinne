@@ -326,7 +326,7 @@ footer .foot-slogan{font-family:'Pinyon Script',cursive;font-size:30px;letter-sp
 @media (max-width:860px){.invites{grid-template-columns:1fr;max-width:400px;margin:0 auto;gap:50px}.inv:nth-child(2){margin-top:0}}
 .curtain{position:relative;height:0;z-index:6;pointer-events:none}.curtain canvas{position:absolute;left:0;top:0;width:100%;height:140px;display:block}
 .cols .signoff{break-inside:avoid;margin-top:.6em}.cols .signoff .sc{display:block;font-family:'Pinyon Script',cursive;font-size:2.4em;line-height:1.1;color:var(--cocoa)}
-@media (min-width:700px){.lockup .big{filter:url(#thin-s)}}@media (min-width:1100px){.lockup .big{filter:url(#thin)}}
+@media (min-width:700px){.lockup .big{filter:url(#thin-s)}.lockup .sig .tx{filter:url(#thin-xs)}}@media (min-width:1100px){.lockup .big{filter:url(#thin)}.lockup .sig .tx{filter:url(#thin-sc)}}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -461,7 +461,7 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <div class="curtain" aria-hidden="true"><canvas></canvas></div>
 
 <main>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="thin" x="-5%" y="-5%" width="110%" height="110%"><feMorphology operator="erode" radius="1.3"/></filter><filter id="thin-s" x="-5%" y="-5%" width="110%" height="110%"><feMorphology operator="erode" radius=".7"/></filter></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="thin" x="-5%" y="-5%" width="110%" height="110%"><feMorphology operator="erode" radius="1.3"/></filter><filter id="thin-sc" x="-5%" y="-10%" width="110%" height="120%"><feMorphology operator="erode" radius=".6"/></filter><filter id="thin-xs" x="-5%" y="-10%" width="110%" height="120%"><feMorphology operator="erode" radius=".35"/></filter><filter id="thin-s" x="-5%" y="-5%" width="110%" height="110%"><feMorphology operator="erode" radius=".7"/></filter></svg>
 <section id="top" class="hero">
 <div class="stamp" aria-hidden="true">
 <svg viewBox="0 0 150 150"><defs><path id="st" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#st">DANCE · MASSAGE · CÔTE D'AZUR · </textPath></text></svg>
