@@ -303,6 +303,7 @@ footer{position:relative}
 .paper .entry{padding-top:70px}
 @media (max-width:600px){.gi{grid-template-columns:44px 1fr;gap:12px}.gi .gn{font-size:28px}.gi h3{font-size:27px}}
 footer .foot-slogan{font-family:'Pinyon Script',cursive;font-size:30px;letter-spacing:0;text-transform:none;color:inherit;opacity:.95}
+.curtain{position:relative;height:0;z-index:6;pointer-events:none}.curtain canvas{position:absolute;left:0;top:0;width:100%;height:150px;display:block}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -375,6 +376,7 @@ btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
 document.querySelectorAll('[data-cities]').forEach(function(el){var ok=c==='all'||el.getAttribute('data-cities').split(' ').indexOf(c)>-1;el.classList.toggle('is-hidden',!ok);if(ok)el.classList.add('in');});});});
 });
 </script>
+<script src="curtain.js" defer></script>
 </head>
 <body>
 
@@ -390,7 +392,7 @@ document.querySelectorAll('[data-cities]').forEach(function(el){var ok=c==='all'
 <a class="res" href="index.html#book">Reserve</a>
 </nav>
 </header>
-<div class="awning" aria-hidden="true"></div>
+<div class="curtain" aria-hidden="true"><canvas></canvas></div>
 
 <main>
 <section class="gh">
