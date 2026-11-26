@@ -287,6 +287,21 @@ footer{position:relative}
 .write{padding:0 24px 140px;text-align:center}
 .write p{margin:18px auto 0;max-width:34rem;font-family:'Instrument Serif',serif;font-size:21px;line-height:1.55;color:var(--soft)}
 @media (max-width:860px){.cgrid{grid-template-columns:1fr;max-width:420px;margin:0 auto}}
+.glist{max-width:880px;margin:0 auto;padding:110px 28px 40px}
+.glist.is-hidden{display:none}
+.gl-head{text-align:center;margin-bottom:46px}
+.gl-head .label{margin:0;color:var(--soft)}
+.gl-head h2{margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(48px,7vw,96px);line-height:.95}
+.gl-head h2 .script{display:block;color:var(--cocoa);font-size:.6em;margin-top:.1em}
+.glist ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.gi{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:30px 6px;border-bottom:1px solid var(--line)}
+.gi .gn{font-family:'Pinyon Script',cursive;font-size:38px;color:var(--cocoa);line-height:1}
+.gi h3{margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:34px;line-height:1.05;text-transform:uppercase}
+.gi .gm{margin:8px 0 0;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--soft)}
+.gi .gd{margin:12px 0 0;font-family:'Instrument Serif',serif;font-size:20px;line-height:1.6}
+.gi .gd a{color:var(--cocoa)}
+.paper .entry{padding-top:70px}
+@media (max-width:600px){.gi{grid-template-columns:44px 1fr;gap:12px}.gi .gn{font-size:28px}.gi h3{font-size:27px}}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -400,6 +415,61 @@ document.querySelectorAll('[data-cities]').forEach(function(el){var ok=c==='all'
 </div></div>
 
 <div class="paper">
+<section class="glist" id="guide-cannes" data-cities="cannes">
+<div class="gl-head rv"><p class="label">Celinne's Cannes</p><h2>CANNES <span class="script">Home on the Riviera</span></h2></div>
+<ol>
+<li class="gi rv"><span class="gn">01</span><div><h3>La Môme Plage</h3><p class="gm">Beach lunch · La Croisette</p><p class="gd">Long lunches by the sea, striped parasols and Slim Aarons photographs on the walls. Pure Riviera glamour, the way I love it.</p></div></li>
+<li class="gi rv"><span class="gn">02</span><div><h3>Marché Forville</h3><p class="gm">Market · Le Suquet</p><p class="gd">The covered market for fruit, flowers and fish. Go early in the morning, then have a coffee nearby while the town wakes up.</p></div></li>
+<li class="gi rv"><span class="gn">03</span><div><h3>Le Suquet</h3><p class="gm">Walk · Old town</p><p class="gd">Climb the little streets of the old town up to the church for the best view over the bay. Beautiful at sunset.</p></div></li>
+<li class="gi rv"><span class="gn">04</span><div><h3>Îles de Lérins</h3><p class="gm">Day trip · A short boat ride</p><p class="gd">Take the boat to Sainte-Marguerite or Saint-Honorat for pine forests, clear water and a slower rhythm. My idea of a reset day.</p></div></li>
+<li class="gi rv"><span class="gn">05</span><div><h3>Astoux et Brun</h3><p class="gm">Seafood · Centre</p><p class="gd">A Cannes classic for oysters and seafood platters. Uncomplicated, lively and always good.</p></div></li>
+<li class="gi rv"><span class="gn">06</span><div><h3>L'Uppercut</h3><p class="gm">Boxing · Cannes</p><p class="gd">My new favourite way to train in Cannes. Focus, rhythm and footwork, which, as a dancer, I love. <a href="#mondrian-uppercut">Read my story</a>.</p></div></li>
+</ol>
+</section>
+<section class="glist" id="guide-nice" data-cities="nice">
+<div class="gl-head rv"><p class="label">Celinne's Nice</p><h2>NICE <span class="script">Old town &amp; sea</span></h2></div>
+<ol>
+<li class="gi rv"><span class="gn">01</span><div><h3>Cours Saleya</h3><p class="gm">Market · Vieux Nice</p><p class="gd">Flowers, produce and the colours of the old town. A morning stroll here is how I like to start a day in Nice.</p></div></li>
+<li class="gi rv"><span class="gn">02</span><div><h3>Colline du Château</h3><p class="gm">Walk · Above the old town</p><p class="gd">Walk up for the panorama over the Baie des Anges and the port. Worth every step, especially early.</p></div></li>
+<li class="gi rv"><span class="gn">03</span><div><h3>Le Plongeoir</h3><p class="gm">Dinner · Bord de mer</p><p class="gd">A restaurant perched on a rock above the sea, on the old diving board. Book a table at sunset.</p></div></li>
+<li class="gi rv"><span class="gn">04</span><div><h3>Chez Pipo</h3><p class="gm">Socca · Port</p><p class="gd">The place for socca, the crispy chickpea pancake of Nice. Simple and delicious.</p></div></li>
+<li class="gi rv"><span class="gn">05</span><div><h3>Fenocchio</h3><p class="gm">Ice cream · Vieux Nice</p><p class="gd">An old-town institution with flavours you will not find anywhere else. Try something unexpected.</p></div></li>
+<li class="gi rv"><span class="gn">06</span><div><h3>Musée Matisse</h3><p class="gm">Art · Cimiez</p><p class="gd">Matisse in the hills of Cimiez, surrounded by olive trees. A calm, light-filled afternoon.</p></div></li>
+</ol>
+</section>
+<section class="glist" id="guide-stockholm" data-cities="stockholm">
+<div class="gl-head rv"><p class="label">Celinne's Stockholm</p><h2>STOCKHOLM <span class="script">Where it began</span></h2></div>
+<ol>
+<li class="gi rv"><span class="gn">01</span><div><h3>Sturebadet</h3><p class="gm">Spa · Östermalm</p><p class="gd">A historic bathhouse from 1885 in the middle of the city, with a pool and a Turkish bath. My favourite way to warm up in winter.</p></div></li>
+<li class="gi rv"><span class="gn">02</span><div><h3>Rosendals Trädgård</h3><p class="gm">Garden café · Djurgården</p><p class="gd">Fika among the greenhouses and fruit trees on Djurgården. Take the long walk there along the water.</p></div></li>
+<li class="gi rv"><span class="gn">03</span><div><h3>Vete-Katten</h3><p class="gm">Fika · City</p><p class="gd">An old-fashioned konditori for a proper Swedish fika. Order a cinnamon bun and take your time.</p></div></li>
+<li class="gi rv"><span class="gn">04</span><div><h3>Östermalms Saluhall</h3><p class="gm">Food hall · Östermalm</p><p class="gd">The grand food hall for Swedish classics. Perfect for a shrimp sandwich at lunch.</p></div></li>
+<li class="gi rv"><span class="gn">05</span><div><h3>Fotografiska</h3><p class="gm">Photography · Södermalm</p><p class="gd">Photography exhibitions with a beautiful view over the water. Stay for a drink after.</p></div></li>
+<li class="gi rv"><span class="gn">06</span><div><h3>Fjäderholmarna</h3><p class="gm">Archipelago · By boat</p><p class="gd">The closest taste of the archipelago, just a short boat ride from the city. Summer at its most Swedish.</p></div></li>
+</ol>
+</section>
+<section class="glist" id="guide-dubai" data-cities="dubai">
+<div class="gl-head rv"><p class="label">Celinne's Dubai</p><h2>DUBAI <span class="script">Desert glamour</span></h2></div>
+<ol>
+<li class="gi rv"><span class="gn">01</span><div><h3>Al Fahidi</h3><p class="gm">Old Dubai · Bur Dubai</p><p class="gd">Wander the wind-tower houses and quiet lanes of the old quarter, then cross the Creek on a wooden abra.</p></div></li>
+<li class="gi rv"><span class="gn">02</span><div><h3>Arabian Tea House</h3><p class="gm">Breakfast · Al Fahidi</p><p class="gd">Breakfast under the tree in a courtyard in old Dubai, with a huge choice of teas.</p></div></li>
+<li class="gi rv"><span class="gn">03</span><div><h3>Alserkal Avenue</h3><p class="gm">Art · Al Quoz</p><p class="gd">Warehouses full of galleries, concept stores and good coffee. My favourite creative corner of the city.</p></div></li>
+<li class="gi rv"><span class="gn">04</span><div><h3>Kite Beach</h3><p class="gm">Morning move · Jumeirah</p><p class="gd">A sunrise walk or run along the sand with the Burj Al Arab in the distance, before the heat sets in.</p></div></li>
+<li class="gi rv"><span class="gn">05</span><div><h3>Madinat Jumeirah</h3><p class="gm">Evening · Umm Suqeim</p><p class="gd">Waterways, wind towers and lantern-lit terraces. Lovely for an evening stroll and dinner.</p></div></li>
+<li class="gi rv"><span class="gn">06</span><div><h3>The desert at dawn</h3><p class="gm">Escape · Al Marmoom</p><p class="gd">Drive out early and watch the sun rise over the dunes. The silence is the luxury.</p></div></li>
+</ol>
+</section>
+<section class="glist" id="guide-bali" data-cities="bali">
+<div class="gl-head rv"><p class="label">Celinne's Bali</p><h2>BALI <span class="script">Slow living</span></h2></div>
+<ol>
+<li class="gi rv"><span class="gn">01</span><div><h3>The Practice</h3><p class="gm">Yoga · Canggu</p><p class="gd">An open-air bamboo shala in the rice fields of Canggu, devoted to traditional Hatha yoga.</p></div></li>
+<li class="gi rv"><span class="gn">02</span><div><h3>The Yoga Barn</h3><p class="gm">Yoga · Ubud</p><p class="gd">The classic place to practise in Ubud, with classes from early morning to evening.</p></div></li>
+<li class="gi rv"><span class="gn">03</span><div><h3>Campuhan Ridge Walk</h3><p class="gm">Walk · Ubud</p><p class="gd">A gentle ridge walk through tall grass and palms. Go at sunrise, before the heat.</p></div></li>
+<li class="gi rv"><span class="gn">04</span><div><h3>Tirta Empul</h3><p class="gm">Temple · Tampaksiring</p><p class="gd">The holy water temple, where people come for a purification ritual. Dress respectfully and go early.</p></div></li>
+<li class="gi rv"><span class="gn">05</span><div><h3>Sidemen</h3><p class="gm">Rice terraces · East Bali</p><p class="gd">The Bali of the postcards: green terraces, Mount Agung and real quiet, far from the crowds.</p></div></li>
+<li class="gi rv"><span class="gn">06</span><div><h3>Uluwatu Temple</h3><p class="gm">Sunset · Bukit Peninsula</p><p class="gd">A clifftop temple above the ocean, with the Kecak fire dance at sunset. Unforgettable.</p></div></li>
+</ol>
+</section>
 <article class="entry rv" data-cities="cannes" id="mondrian-uppercut">
 <div class="meta"><span>Cannes</span><span>·</span><span>New opening</span><span>·</span><span>Fitness</span></div>
 <h2>A knockout evening <span class="script">Mondrian × L'Uppercut</span></h2>
@@ -421,11 +491,11 @@ document.querySelectorAll('[data-cities]').forEach(function(el){var ok=c==='all'
 <h2 id="cities-h" class="rv">Where I feel <span class="script sc">at home</span></h2>
 </div>
 <div class="cgrid">
-<a class="city light rv" data-cities="cannes" href="#mondrian-uppercut" style="text-decoration:none"><span class="cn">Cannes</span><span class="ct">Home on the Riviera</span><span class="cc">1 entry</span><p>Boxing at Mondrian × L'Uppercut, and more favourites coming soon.</p></a>
-<div class="city light rv" data-cities="nice"><span class="cn">Nice</span><span class="ct">Old town &amp; sea</span><span class="cc">Coming soon</span><p>Celinne's favourite spots in Nice, coming soon.</p></div>
-<div class="city light rv" data-cities="stockholm"><span class="cn">Stockholm</span><span class="ct">Where it began</span><span class="cc">Coming soon</span><p>Her Swedish favourites, coming soon.</p></div>
-<div class="city light rv" data-cities="dubai"><span class="cn">Dubai</span><span class="ct">Desert glamour</span><span class="cc">Coming soon</span><p>Her Dubai favourites, coming soon.</p></div>
-<div class="city light rv" data-cities="bali"><span class="cn">Bali</span><span class="ct">Slow living</span><span class="cc">Coming soon</span><p>Her Bali favourites, coming soon.</p></div>
+<a class="city light rv" data-cities="cannes" href="#guide-cannes" style="text-decoration:none"><span class="cn">Cannes</span><span class="ct">Home on the Riviera</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Cannes.</p></a>
+<a class="city light rv" data-cities="nice" href="#guide-nice" style="text-decoration:none"><span class="cn">Nice</span><span class="ct">Old town &amp; sea</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Nice.</p></a>
+<a class="city light rv" data-cities="stockholm" href="#guide-stockholm" style="text-decoration:none"><span class="cn">Stockholm</span><span class="ct">Where it began</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Stockholm.</p></a>
+<a class="city light rv" data-cities="dubai" href="#guide-dubai" style="text-decoration:none"><span class="cn">Dubai</span><span class="ct">Desert glamour</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Dubai.</p></a>
+<a class="city light rv" data-cities="bali" href="#guide-bali" style="text-decoration:none"><span class="cn">Bali</span><span class="ct">Slow living</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Bali.</p></a>
 <a class="city light rv" data-cities="cannes nice stockholm dubai bali" href="index.html#book" data-topic="Something else" style="text-decoration:none"><span class="cn">Your city?</span><span class="ct">Ask Celinne</span><span class="cc">Recommendations</span><p>Visiting somewhere she knows? Ask her for a favourite.</p></a>
 </div>
 </div>
