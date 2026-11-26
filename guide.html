@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Celinne's City Guide — Wellness with Celinne</title>
-<meta name="description" content="Celinne's City Guide: her favourite spots, new openings and recommendations in Cannes, Nice, Stockholm, Dubai and Bali.">
+<title>Celinne's Address Book — Wellness with Celinne</title>
+<meta name="description" content="Celinne's Address Book: her favourite spots, new openings and recommendations in Cannes, Nice, Stockholm, Dubai and Bali.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23234F2E'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='32' fill='%23F5EFE6'%3EC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -304,6 +304,14 @@ footer{position:relative}
 @media (max-width:600px){.gi{grid-template-columns:44px 1fr;gap:12px}.gi .gn{font-size:28px}.gi h3{font-size:27px}}
 footer .foot-slogan{font-family:'Pinyon Script',cursive;font-size:30px;letter-spacing:0;text-transform:none;color:inherit;opacity:.95}
 .curtain{position:relative;height:0;z-index:6;pointer-events:none}.curtain canvas{position:absolute;left:0;top:0;width:100%;height:140px;display:block}
+.soon{background:#fff;color:#234F2E;--soft:#43664A;--cocoa:#437350;text-align:center;padding:110px 28px 40px;border-top:1px solid rgba(35,79,46,.18)}
+.soon h2{margin:14px 0 40px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;text-transform:uppercase}
+.soon h2 .script{color:var(--cocoa);text-transform:none}
+.soon ol{list-style:none;margin:0 auto;padding:0;max-width:1100px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(35,79,46,.18);border-bottom:1px solid rgba(35,79,46,.18);counter-reset:s}
+.soon li{counter-increment:s;padding:34px 22px;font-family:'Instrument Serif',serif;font-size:24px;line-height:1.2}
+.soon li+li{border-left:1px solid rgba(35,79,46,.18)}
+.soon li::before{content:counter(s,upper-roman);display:block;margin-bottom:12px;font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.28em;color:var(--soft)}
+@media (max-width:860px){.soon ol{grid-template-columns:1fr}.soon li+li{border-left:0;border-top:1px solid rgba(35,79,46,.18)}}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -406,8 +414,8 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <a href="index.html#massage">Massage</a>
 <a href="index.html#happenings">Happenings</a>
 <a href="retreats.html">Retreats</a>
-<a href="guide.html" aria-current="page" style="background:rgba(239,230,216,.12)">City Guide</a>
-<a class="res" href="index.html#book">Reserve</a>
+<a href="guide.html" aria-current="page" style="background:rgba(239,230,216,.12)">Address Book</a>
+<a class="res" href="index.html#book">Book</a>
 </nav>
 </header>
 <div class="curtain" aria-hidden="true"><canvas></canvas></div>
@@ -415,7 +423,7 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <main>
 <section class="gh">
 <span class="sig">Celinne's</span>
-<h1>City Guide</h1>
+<h1>Address Book</h1>
 <p>Favourite spots, new openings and little discoveries, from the Riviera to Stockholm, Dubai and Bali.</p>
 </section>
 
@@ -503,6 +511,12 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <p class="sign">Celinne</p>
 </article>
 </div>
+
+<section class="soon" aria-labelledby="soon-h">
+<p class="label rv" style="color:var(--soft);margin:0">Coming soon</p>
+<h2 id="soon-h" class="rv">From my <span class="script sc">notebook</span></h2>
+<ol class="rv"><li>My perfect Sunday in Cannes</li><li>Where I go for a long lunch</li><li>My Swedish wellness rituals</li><li>What's in my Riviera beach bag</li></ol>
+</section>
 
 <section class="cities" aria-labelledby="cities-h">
 <div class="wrap">
