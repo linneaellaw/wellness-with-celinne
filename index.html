@@ -250,9 +250,6 @@ footer{position:relative}
 .cform .send{align-self:center;margin-top:8px;cursor:pointer;background:transparent;color:inherit;font-family:'Jost',sans-serif}
 .cform .status{margin:0;text-align:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;min-height:1.4em}
 @media (max-width:860px){.cform .row2{grid-template-columns:1fr}}
-.wood{--soft:#E3D3BE;--cocoa:#F1E2C8;--line:rgba(243,234,220,.2);color:#F3EADC;background-color:#3B2517;background-image:radial-gradient(700px 420px at var(--mx,50%) var(--my,0%),rgba(255,206,150,.24),transparent 70%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.09 0.004' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .13 0 0 0 0 .07 0 0 0 0 .03 1.1 0 0 0 -.38'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E"),repeating-linear-gradient(90deg,rgba(0,0,0,.28) 0 1px,rgba(255,255,255,.04) 1px 2px,transparent 2px 230px),linear-gradient(90deg,#4A2E1D,#3A2417 45%,#4B301E);background-size:auto,420px 420px,auto,auto}
-.wood a{color:inherit}
-footer.wood{padding:56px 24px 50px}footer.wood p{color:rgba(243,234,220,.7)}
 .white{background:#fff;color:#234F2E;--soft:#43664A;--cocoa:#437350;--line:rgba(35,79,46,.18);--moss:#234F2E}
 .mood.white{padding:130px 0 140px}
 .stack{--cw:min(400px,58vw);position:relative;height:calc(var(--cw)*1.25 + 110px);max-width:1200px;margin:0 auto}
@@ -281,8 +278,7 @@ transform:translateX(-50%) translate(var(--x,0px),var(--y,0px)) rotate(var(--r,0
 .idx-float{position:fixed;left:0;top:0;width:280px;height:360px;object-fit:cover;border-radius:999px 999px 0 0;border:8px solid #FBF8F2;box-shadow:0 30px 60px rgba(0,0,0,.35);pointer-events:none;opacity:0;z-index:40;transform:translate(-50%,-50%) scale(.85) rotate(-4deg);transition:opacity .35s,transform .5s cubic-bezier(.2,.7,.2,1)}
 .idx-float.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-2deg)}
 @media (pointer:coarse),(max-width:860px){.idx-float{display:none}.idx-list a{grid-template-columns:64px 1fr;gap:6px 16px}.idx-list .th{display:block;grid-row:1/3;width:64px;height:80px;object-fit:cover;border-radius:999px 999px 0 0}.idx-list .n{display:none}.idx-list .s{grid-column:2}}
-.happ.wood{border:0;padding:140px 0 160px}
-.happ.wood .hc.c1{background:#F3EADC;color:#234F2E}.happ.wood .hc.c1 .script{color:#437350}
+.happ.happ.wood .hc.c1{background:#F3EADC;color:#234F2E}.happ.wood .hc.c1 .script{color:#437350}
 .happ.wood .hc.c2{border-radius:999px 999px 0 0;padding-top:90px}
 .happ.wood .hc.c3{background:#234F2E;color:#F3EADC}
 .happ.wood .hc{box-shadow:0 30px 50px -20px rgba(0,0,0,.6)}
@@ -354,7 +350,6 @@ fetch('https://formsubmit.co/ajax/celinne.karlsson@icloud.com',{method:'POST',he
 .finally(function(){btn.disabled=false;});});
 });
 </script>
-<script>addEventListener('DOMContentLoaded',function(){if(!matchMedia('(pointer:fine)').matches)return;document.querySelectorAll('.wood').forEach(function(w){w.addEventListener('mousemove',function(e){var r=w.getBoundingClientRect();w.style.setProperty('--mx',(e.clientX-r.left)+'px');w.style.setProperty('--my',(e.clientY-r.top)+'px');});});});</script>
 <script src="music.js" defer></script>
 <script>
 addEventListener('DOMContentLoaded',function(){
@@ -503,7 +498,7 @@ a.addEventListener('mouseleave',function(){fl.classList.remove('on');});a.addEve
 <div class="rules rv"><span>No packages</span><span>No memberships</span><span>Book what you feel like</span></div>
 </section>
 
-<section id="happenings" class="happ wood">
+<section id="happenings" class="happ">
 <div class="wrap">
 <div class="head">
 <p class="label rv" style="color:var(--soft);margin:0">Happenings</p>
@@ -565,7 +560,7 @@ a.addEventListener('mouseleave',function(){fl.classList.remove('on');});a.addEve
 </main>
 
 <div class="stripes" aria-hidden="true"></div>
-<footer class="wood">
+<footer>
 <a class="brand" href="#top" aria-label="Back to top"><span>WELLNESS</span><em>with</em><span>CELINNE</span></a>
 <p>Dance · Massage · Côte d'Azur</p>
 </footer>
