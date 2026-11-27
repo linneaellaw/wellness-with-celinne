@@ -254,10 +254,6 @@ footer{position:relative}
 .gh .sig{display:block;font-family:'Pinyon Script',cursive;font-size:clamp(56px,8vw,112px);line-height:.9;color:var(--cocoa);animation:rise 1.6s .2s cubic-bezier(.2,.7,.2,1) both}
 .gh h1{margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(72px,13vw,196px);line-height:.85;text-transform:uppercase;animation:up 1.5s .5s cubic-bezier(.16,.8,.2,1) both}
 .gh p{margin:34px auto 0;max-width:34rem;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(20px,2vw,25px);line-height:1.5;color:var(--soft);animation:rise 1.4s 1s cubic-bezier(.2,.7,.2,1) both}
-.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;padding:0 24px 70px}
-.tabs button{font:inherit;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:inherit;background:transparent;border:1px solid var(--line);border-radius:999px;padding:12px 22px;cursor:pointer;transition:background .4s,color .4s,border-color .4s}
-.tabs button:hover{border-color:currentColor}
-.tabs button[aria-pressed="true"]{background:#EFE6D8;color:#234F2E;border-color:#EFE6D8}
 .paper{background:#FFFFFF;color:#234F2E;--soft:#43664A;--cocoa:#437350;--line:rgba(35,79,46,.18)}
 .entry{max-width:720px;margin:0 auto;padding:110px 28px 120px}
 .entry .meta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--soft)}
@@ -283,12 +279,10 @@ footer{position:relative}
 .city .cc{font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.75}
 .city p{margin:6px 0 0;font-family:'Instrument Serif',serif;font-size:18px;line-height:1.55;opacity:.9;max-width:18rem}
 .city.light{background:#fff;color:#234F2E;border-color:#fff;--cocoa:#437350}.city.light:hover{background:#FBF8F2}
-.city.is-hidden,.entry.is-hidden{display:none}
 .write{padding:0 24px 140px;text-align:center}
 .write p{margin:18px auto 0;max-width:34rem;font-family:'Instrument Serif',serif;font-size:21px;line-height:1.55;color:var(--soft)}
 @media (max-width:860px){.cgrid{grid-template-columns:1fr;max-width:420px;margin:0 auto}}
 .glist{max-width:880px;margin:0 auto;padding:110px 28px 40px}
-.glist.is-hidden{display:none}
 .gl-head{text-align:center;margin-bottom:46px}
 .gl-head .label{margin:0;color:var(--soft)}
 .gl-head h2{margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(48px,7vw,96px);line-height:.95}
@@ -312,6 +306,43 @@ footer .foot-slogan{font-family:'Pinyon Script',cursive;font-size:30px;letter-sp
 .soon li+li{border-left:1px solid rgba(35,79,46,.18)}
 .soon li::before{content:counter(s,upper-roman);display:block;margin-bottom:12px;font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.28em;color:var(--soft)}
 @media (max-width:860px){.soon ol{grid-template-columns:1fr}.soon li+li{border-left:0;border-top:1px solid rgba(35,79,46,.18)}}
+.gh .jump{margin-top:40px;display:flex;justify-content:center;align-items:center;gap:22px;animation:rise 1.4s 1.2s cubic-bezier(.2,.7,.2,1) both}
+.gh .jump b{width:5px;height:5px;border-radius:50%;background:var(--moss);opacity:.6}
+.hint{margin:22px auto 0;max-width:30rem;font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;line-height:1.5;color:var(--soft)}
+.cities{padding:110px 28px 140px}
+.city{cursor:pointer}
+.journal{background:#fff;color:var(--ivory);--soft:#43664A;--cocoa:#437350;--line:rgba(35,79,46,.18);padding:120px 28px 30px}
+.journal .head{text-align:center;margin-bottom:60px}
+.journal .head h2{margin:14px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(44px,5.4vw,80px);line-height:1;text-transform:uppercase}
+.journal .head h2 .script{color:var(--cocoa);text-transform:none}
+.jgrid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
+.jcard{display:flex;flex-direction:column;gap:18px;padding:40px 40px 38px;border:1px solid var(--line);color:inherit;text-decoration:none}
+.jcard .meta{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--soft)}
+.jcard h3{margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,3.2vw,46px);line-height:1;text-transform:uppercase}
+.jcard h3 .script{display:block;text-transform:none;color:var(--cocoa);font-size:.82em;margin-top:.12em;line-height:1.15}
+.jcard p{margin:0;font-family:'Instrument Serif',serif;font-size:20px;line-height:1.55}
+.jcard .more{align-self:flex-start;font-size:11px;letter-spacing:.3em;text-transform:uppercase;padding-bottom:8px;border-bottom:1px solid currentColor;margin-top:14px}
+.jcard.feature{grid-row:span 2;justify-content:flex-end;min-height:460px;background:var(--ivory);color:var(--choc);border-color:var(--ivory);--soft:#CFC7B4;--cocoa:#DCCBAE;padding:56px 52px 50px;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.jcard.feature h3{font-size:clamp(46px,5vw,78px)}
+.jcard.feature:hover{transform:translateY(-6px)}
+.jcard.soonc{opacity:.8}
+.soon{border-top:0}
+.js .paper{display:contents}
+.js .paper > .glist,.js .paper > .entry{position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(820px,100%);max-width:none;margin:0;overflow-y:auto;overscroll-behavior:contain;background:#fff;color:var(--ivory);--soft:#43664A;--cocoa:#437350;--line:rgba(35,79,46,.18);padding:0 56px 70px;transform:translateX(102%);visibility:hidden;transition:transform .65s cubic-bezier(.2,.7,.2,1),visibility 0s linear .65s;box-shadow:-40px 0 90px rgba(0,0,0,.3);outline:none}
+.js .paper > .open{transform:none;visibility:visible;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.sheet-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;margin:0 -56px 50px;padding:22px 56px;background:#fff;border-bottom:1px solid var(--line);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--soft)}
+.sheet-x{font:inherit;color:var(--ivory);background:none;border:0;cursor:pointer;letter-spacing:.3em;text-transform:uppercase;display:flex;align-items:center;gap:10px;padding:6px 0}
+.sheet-x i{font-style:normal;font-size:15px;letter-spacing:0}
+.sheet-back{display:block;margin:50px auto 0;font:inherit;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:inherit;background:none;border:0;cursor:pointer}
+.scrim{position:fixed;inset:0;z-index:89;background:rgba(10,28,16,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .5s}
+.scrim.on{opacity:1;pointer-events:auto}
+html.sheet-on{overflow:hidden}
+@media (max-width:860px){
+.jgrid{grid-template-columns:1fr}.jcard.feature{grid-row:auto;min-height:0;padding:44px 30px 40px}.jcard{padding:34px 28px}
+.js .paper > .glist,.js .paper > .entry{padding:0 22px 60px}
+.sheet-bar{margin:0 -22px 36px;padding:18px 22px}
+.gi{grid-template-columns:46px 1fr;gap:12px}
+}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(36px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),transform 1.3s cubic-bezier(.2,.7,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -378,10 +409,30 @@ fetch('https://formsubmit.co/ajax/celinne.karlsson@icloud.com',{method:'POST',he
 </script>
 <script>
 addEventListener('DOMContentLoaded',function(){
-var btns=[].slice.call(document.querySelectorAll('.tabs button'));
-btns.forEach(function(b){b.addEventListener('click',function(){var c=b.getAttribute('data-city');
-btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-document.querySelectorAll('[data-cities]').forEach(function(el){var ok=c==='all'||el.getAttribute('data-cities').split(' ').indexOf(c)>-1;el.classList.toggle('is-hidden',!ok);if(ok)el.classList.add('in');});});});
+var sheets=[].slice.call(document.querySelectorAll('.paper > .glist, .paper > .entry')),scrim=document.querySelector('.scrim'),cur=null,opener=null;
+sheets.forEach(function(sh){
+  var bar=document.createElement('div');bar.className='sheet-bar';
+  bar.innerHTML='<span>Celinne’s Address Book</span><button type="button" class="sheet-x">Close <i aria-hidden="true">✕</i></button>';
+  sh.insertBefore(bar,sh.firstChild);
+  var back=document.createElement('button');back.type='button';back.className='sheet-back link';back.textContent=sh.classList.contains('entry')?'Back to the journal':'Back to all cities';
+  sh.appendChild(back);
+  sh.setAttribute('role','dialog');sh.setAttribute('aria-modal','true');sh.setAttribute('tabindex','-1');
+  var h=sh.querySelector('h2');if(h){h.id=h.id||sh.id+'-t';sh.setAttribute('aria-labelledby',h.id);}
+  bar.querySelector('button').addEventListener('click',close);back.addEventListener('click',close);
+});
+function open(id,from){var sh=document.getElementById(id);if(!sh||sheets.indexOf(sh)<0)return false;
+  if(cur&&cur!==sh)cur.classList.remove('open');
+  if(!cur)opener=from||null;
+  cur=sh;sh.scrollTop=0;sh.classList.add('open');scrim.classList.add('on');document.documentElement.classList.add('sheet-on');
+  sh.querySelectorAll('.rv,.sc').forEach(function(e){e.classList.add('in');});
+  history.replaceState(null,'','#'+id);setTimeout(function(){sh.focus({preventScroll:true});},60);return true;}
+function close(){if(!cur)return;cur.classList.remove('open');scrim.classList.remove('on');document.documentElement.classList.remove('sheet-on');cur=null;
+  history.replaceState(null,'',location.pathname+location.search);if(opener&&opener.focus)opener.focus({preventScroll:true});}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
+  if(sheets.some(function(x){return x.id===id;})){e.preventDefault();open(id,a);}});
+scrim.addEventListener('click',close);
+addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+var h=location.hash.slice(1);if(h)open(h);
 });
 </script>
 <style id="mobile-fix">
@@ -423,16 +474,9 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <span class="sig">Celinne's</span>
 <h1>Address Book</h1>
 <p>Favourite spots, new openings and little discoveries, from the Riviera to Stockholm, Dubai and Bali.</p>
+<div class="jump"><a class="link" href="#cities">The cities</a><b></b><a class="link" href="#journal">The journal</a></div>
 </section>
 
-<div class="tabs" role="group" aria-label="Choose a city">
-<button type="button" data-city="all" aria-pressed="true">All cities</button>
-<button type="button" data-city="cannes" aria-pressed="false">Cannes</button>
-<button type="button" data-city="nice" aria-pressed="false">Nice</button>
-<button type="button" data-city="stockholm" aria-pressed="false">Stockholm</button>
-<button type="button" data-city="dubai" aria-pressed="false">Dubai</button>
-<button type="button" data-city="bali" aria-pressed="false">Bali</button>
-</div>
 
 <div class="marquee" aria-hidden="true"><div>
 <span>Cannes</span><em>Riviera</em><span>Nice</span><em>Favourites</em><span>Stockholm</span><em>New openings</em><span>Dubai</span><em>Secrets</em><span>Bali</span><em>Wellness</em>
@@ -440,8 +484,58 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <span>Cannes</span><em>Riviera</em><span>Nice</span><em>Favourites</em><span>Stockholm</span><em>New openings</em><span>Dubai</span><em>Secrets</em><span>Bali</span><em>Wellness</em>
 </div></div>
 
+
+<section class="cities" id="cities" aria-labelledby="cities-h">
+<div class="wrap">
+<div class="head">
+<p class="label rv" style="color:var(--soft);margin:0">The guides</p>
+<h2 id="cities-h" class="rv">Where I feel <span class="script sc">at home</span></h2>
+<p class="hint rv">Choose a city to open my six favourite places.</p>
+</div>
+<div class="cgrid">
+<a class="city light rv" href="#guide-cannes" style="text-decoration:none"><span class="cn">Cannes</span><span class="ct">Home on the Riviera</span><span class="cc">6 favourites · Open</span><p>Celinne's favourite places in Cannes.</p></a>
+<a class="city light rv" href="#guide-nice" style="text-decoration:none"><span class="cn">Nice</span><span class="ct">Old town &amp; sea</span><span class="cc">6 favourites · Open</span><p>Celinne's favourite places in Nice.</p></a>
+<a class="city light rv" href="#guide-stockholm" style="text-decoration:none"><span class="cn">Stockholm</span><span class="ct">Where it began</span><span class="cc">6 favourites · Open</span><p>Celinne's favourite places in Stockholm.</p></a>
+<a class="city light rv" href="#guide-dubai" style="text-decoration:none"><span class="cn">Dubai</span><span class="ct">Desert glamour</span><span class="cc">6 favourites · Open</span><p>Celinne's favourite places in Dubai.</p></a>
+<a class="city light rv" href="#guide-bali" style="text-decoration:none"><span class="cn">Bali</span><span class="ct">Slow living</span><span class="cc">6 favourites · Open</span><p>Celinne's favourite places in Bali.</p></a>
+<a class="city light rv" href="index.html#book" data-topic="Something else" style="text-decoration:none"><span class="cn">Your city?</span><span class="ct">Ask Celinne</span><span class="cc">Recommendations</span><p>Visiting somewhere she knows? Ask her for a favourite.</p></a>
+</div>
+</div>
+</section>
+
+<section class="journal" id="journal" aria-labelledby="journal-h">
+<div class="head">
+<p class="label rv" style="color:var(--soft);margin:0">The journal</p>
+<h2 id="journal-h" class="rv">Invitations &amp; <span class="script sc">collaborations</span></h2>
+<p class="hint rv">Evenings I have been invited to, brand collaborations and special events.</p>
+</div>
+<div class="jgrid">
+<a class="jcard feature rv" href="#mondrian-uppercut">
+<span class="meta">Cannes · Event · Brand collaboration</span>
+<h3>A knockout evening <span class="script">Mondrian × L'Uppercut</span></h3>
+<p>An evening of boxing in Cannes, and my new favourite place to train.</p>
+<span class="more">Read the story</span>
+</a>
+<div class="jcard soonc rv">
+<span class="meta">Coming soon</span>
+<h3>Brand <span class="script">collaborations</span></h3>
+<p>Pop-ups, launches and partnerships I'm part of will be shared here.</p>
+</div>
+<div class="jcard soonc rv">
+<span class="meta">Coming soon</span>
+<h3>Special <span class="script">invitations</span></h3>
+<p>Private evenings and invite-only events, with a little look inside.</p>
+</div>
+</div>
+</section>
+<section class="soon" aria-labelledby="soon-h">
+<p class="label rv" style="color:var(--soft);margin:0">Coming soon to the journal</p>
+<h2 id="soon-h" class="rv">From my <span class="script sc">notebook</span></h2>
+<ol class="rv"><li>My perfect Sunday in Cannes</li><li>Where I go for a long lunch</li><li>My Swedish wellness rituals</li><li>What's in my Riviera beach bag</li></ol>
+</section>
+
 <div class="paper">
-<section class="glist" id="guide-cannes" data-cities="cannes">
+<section class="glist" id="guide-cannes">
 <div class="gl-head rv"><p class="label">Celinne's Cannes</p><h2>CANNES <span class="script">Home on the Riviera</span></h2></div>
 <ol>
 <li class="gi rv"><span class="gn">01</span><div><h3>La Môme Plage</h3><p class="gm">Beach lunch · La Croisette</p><p class="gd">Long lunches by the sea, striped parasols and Slim Aarons photographs on the walls. Pure Riviera glamour, the way I love it.</p></div></li>
@@ -452,7 +546,7 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <li class="gi rv"><span class="gn">06</span><div><h3>L'Uppercut</h3><p class="gm">Boxing · Cannes</p><p class="gd">My new favourite way to train in Cannes. Focus, rhythm and footwork, which, as a dancer, I love. <a href="#mondrian-uppercut">Read my story</a>.</p></div></li>
 </ol>
 </section>
-<section class="glist" id="guide-nice" data-cities="nice">
+<section class="glist" id="guide-nice">
 <div class="gl-head rv"><p class="label">Celinne's Nice</p><h2>NICE <span class="script">Old town &amp; sea</span></h2></div>
 <ol>
 <li class="gi rv"><span class="gn">01</span><div><h3>Cours Saleya</h3><p class="gm">Market · Vieux Nice</p><p class="gd">Flowers, produce and the colours of the old town. A morning stroll here is how I like to start a day in Nice.</p></div></li>
@@ -463,7 +557,7 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <li class="gi rv"><span class="gn">06</span><div><h3>Musée Matisse</h3><p class="gm">Art · Cimiez</p><p class="gd">Matisse in the hills of Cimiez, surrounded by olive trees. A calm, light-filled afternoon.</p></div></li>
 </ol>
 </section>
-<section class="glist" id="guide-stockholm" data-cities="stockholm">
+<section class="glist" id="guide-stockholm">
 <div class="gl-head rv"><p class="label">Celinne's Stockholm</p><h2>STOCKHOLM <span class="script">Where it began</span></h2></div>
 <ol>
 <li class="gi rv"><span class="gn">01</span><div><h3>Sturebadet</h3><p class="gm">Spa · Östermalm</p><p class="gd">A historic bathhouse from 1885 in the middle of the city, with a pool and a Turkish bath. My favourite way to warm up in winter.</p></div></li>
@@ -474,7 +568,7 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <li class="gi rv"><span class="gn">06</span><div><h3>Fjäderholmarna</h3><p class="gm">Archipelago · By boat</p><p class="gd">The closest taste of the archipelago, just a short boat ride from the city. Summer at its most Swedish.</p></div></li>
 </ol>
 </section>
-<section class="glist" id="guide-dubai" data-cities="dubai">
+<section class="glist" id="guide-dubai">
 <div class="gl-head rv"><p class="label">Celinne's Dubai</p><h2>DUBAI <span class="script">Desert glamour</span></h2></div>
 <ol>
 <li class="gi rv"><span class="gn">01</span><div><h3>Al Fahidi</h3><p class="gm">Old Dubai · Bur Dubai</p><p class="gd">Wander the wind-tower houses and quiet lanes of the old quarter, then cross the Creek on a wooden abra.</p></div></li>
@@ -485,7 +579,7 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <li class="gi rv"><span class="gn">06</span><div><h3>The desert at dawn</h3><p class="gm">Escape · Al Marmoom</p><p class="gd">Drive out early and watch the sun rise over the dunes. The silence is the luxury.</p></div></li>
 </ol>
 </section>
-<section class="glist" id="guide-bali" data-cities="bali">
+<section class="glist" id="guide-bali">
 <div class="gl-head rv"><p class="label">Celinne's Bali</p><h2>BALI <span class="script">Slow living</span></h2></div>
 <ol>
 <li class="gi rv"><span class="gn">01</span><div><h3>The Practice</h3><p class="gm">Yoga · Canggu</p><p class="gd">An open-air bamboo shala in the rice fields of Canggu, devoted to traditional Hatha yoga.</p></div></li>
@@ -496,7 +590,7 @@ html,body{overflow-x:hidden;overflow-x:clip}
 <li class="gi rv"><span class="gn">06</span><div><h3>Uluwatu Temple</h3><p class="gm">Sunset · Bukit Peninsula</p><p class="gd">A clifftop temple above the ocean, with the Kecak fire dance at sunset. Unforgettable.</p></div></li>
 </ol>
 </section>
-<article class="entry rv" data-cities="cannes" id="mondrian-uppercut">
+<article class="entry rv" id="mondrian-uppercut">
 <div class="meta"><span>Cannes</span><span>·</span><span>New opening</span><span>·</span><span>Fitness</span></div>
 <h2>A knockout evening <span class="script">Mondrian × L'Uppercut</span></h2>
 <p class="lede">An evening of boxing in Cannes, and my new favourite place to train.</p>
@@ -510,28 +604,8 @@ html,body{overflow-x:hidden;overflow-x:clip}
 </article>
 </div>
 
-<section class="soon" aria-labelledby="soon-h">
-<p class="label rv" style="color:var(--soft);margin:0">Coming soon</p>
-<h2 id="soon-h" class="rv">From my <span class="script sc">notebook</span></h2>
-<ol class="rv"><li>My perfect Sunday in Cannes</li><li>Where I go for a long lunch</li><li>My Swedish wellness rituals</li><li>What's in my Riviera beach bag</li></ol>
-</section>
 
-<section class="cities" aria-labelledby="cities-h">
-<div class="wrap">
-<div class="head">
-<p class="label rv" style="color:var(--soft);margin:0">The guides</p>
-<h2 id="cities-h" class="rv">Where I feel <span class="script sc">at home</span></h2>
-</div>
-<div class="cgrid">
-<a class="city light rv" data-cities="cannes" href="#guide-cannes" style="text-decoration:none"><span class="cn">Cannes</span><span class="ct">Home on the Riviera</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Cannes.</p></a>
-<a class="city light rv" data-cities="nice" href="#guide-nice" style="text-decoration:none"><span class="cn">Nice</span><span class="ct">Old town &amp; sea</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Nice.</p></a>
-<a class="city light rv" data-cities="stockholm" href="#guide-stockholm" style="text-decoration:none"><span class="cn">Stockholm</span><span class="ct">Where it began</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Stockholm.</p></a>
-<a class="city light rv" data-cities="dubai" href="#guide-dubai" style="text-decoration:none"><span class="cn">Dubai</span><span class="ct">Desert glamour</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Dubai.</p></a>
-<a class="city light rv" data-cities="bali" href="#guide-bali" style="text-decoration:none"><span class="cn">Bali</span><span class="ct">Slow living</span><span class="cc">6 favourites</span><p>Celinne's favourite places in Bali.</p></a>
-<a class="city light rv" data-cities="cannes nice stockholm dubai bali" href="index.html#book" data-topic="Something else" style="text-decoration:none"><span class="cn">Your city?</span><span class="ct">Ask Celinne</span><span class="cc">Recommendations</span><p>Visiting somewhere she knows? Ask her for a favourite.</p></a>
-</div>
-</div>
-</section>
+<div class="scrim" aria-hidden="true"></div>
 </main>
 
 <div class="stripes" aria-hidden="true"></div>
